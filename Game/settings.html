@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Go Back Button -->
+    <button onclick="goBack()" class="back-button">← Back</button>
+
+    <!-- Settings container -->
+    <div class="settings-box">
+        <!-- Background image -->
+        <div class="settings-image">
+            <img src="images/min10.jpg" alt="Settings Background">
+        </div>
+
+        <!-- Settings options -->
+        <div class="settings-content">
+            <h2>Settings</h2>
+
+            <!-- Setting items -->
+            <div class="setting-item">
+                <span>Sound</span>
+                <label class="switch">
+                    <input type="checkbox" id="sound" onchange="toggleSound()">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-item">
+                <span>Music</span>
+                <label class="switch">
+                    <input type="checkbox" id="music">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-item">
+                <span>Notifications</span>
+                <label class="switch">
+                    <input type="checkbox" id="notifications">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-item">
+                <span>Vibration</span>
+                <label class="switch">
+                    <input type="checkbox" id="vibration">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio element for the soundtrack -->
+    <audio id="minionSound" loop>
+        <source src="images/The_Minions_-_Papa_Mama_Loca_Pipa_(Hydr0.org).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function goBack() {
+            window.location.href = "Mainmenu.php"; // Adjust the URL to your main menu page
+        }
+
+        function toggleSound() {
+            const soundCheckbox = document.getElementById("sound");
+            const minionSound = document.getElementById("minionSound");
+
+            if (soundCheckbox.checked) {
+                minionSound.play();
+            } else {
+                minionSound.pause();
+                minionSound.currentTime = 0; // Reset the audio to the beginning
+            }
+        }
+    </script>
+</body>
+</html>

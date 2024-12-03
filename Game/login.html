@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box1">
+        <div class="login-container">
+            <div class="login-image">
+                <img src="images/im01.jpg" alt="Login Background">
+            </div>
+            <div class="login-overlay">
+                <h2>Login</h2>
+
+                <!-- Start of the login form -->
+                <form action="login.php" method="POST">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    
+                    <p>If you don't have an account, <a href="register.html">register here</a>.</p>
+                    
+                    <button type="submit">Login</button>
+                </form>
+                <!-- End of the login form -->
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

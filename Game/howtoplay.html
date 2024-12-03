@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Go Back Button -->
+    <button class="back-button" onclick="goBack()">← Back</button>
+
+    <!-- Outer box for how-to-play page -->
+    
+        <div class="rules-container">
+            <!-- Title at the top -->
+            <h2>How to Play</h2>
+
+            <!-- Rules displayed in separate transparent boxes -->
+            <div class="rule-box">
+                <p>1. The game consists of 5 levels, each with an image-based question.</p>
+            </div>
+            <div class="rule-box">
+                <p>2. Each level has a 1-minute time limit.</p>
+            </div>
+            <div class="rule-box">
+                <p>3. The goal is to correctly identify and enter the solution for each question before time runs out.</p>
+            </div>
+            <div class="rule-box">
+                <p>4. Click a number button to submit your answer.</p>
+            </div>
+            <div class="rule-box">
+                <p>5. If your answer is correct, you'll gain 20 marks. If your answer is incorrect, 10 marks will be deducted.</p>
+            </div>
+            <div class="rule-box">
+                <p>6. If time runs out before you submit an answer, you have to start from level 1.</p>
+            </div>
+            <div class="rule-box">
+                <p>7. Your current score is displayed at the top of the game screen.</p>
+            </div>
+            <div class="rule-box">
+                <p>8. To return to the main menu, click the "Arrow" button at the top of the game screen.</p>
+            </div>
+        </div>
+    
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
