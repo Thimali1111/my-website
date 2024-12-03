@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Page</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Existing API and quest logic (unchanged)
+        var quest = "";
+        var solution = -1;
+        //call the function and reset
+        let newgame = function(x) {
+            startup();
+        }
+        //compare user answers
+        let handleInput = function(x) {
+            let inp = document.getElementById("input");
+            var note = document.getElementById("note");
+            if (inp.value == solution) {
+                note.innerHTML = 'Correct! -  <button class="button-62" onClick="newgame()">New game?</button>';
+            } else {
+                note.innerHTML = "Not Correct!";
+            }
+        }
+        //start new game function
+        let startQuest = function(data) {
+            var parsed = JSON.parse(data);
+            quest = parsed.question;
+            solution = parsed.solution;
+            let img = document.getElementById("quest");
+            img.src = quest;
+            let note = document.getElementById("note");
+            note.innerHTML = "Quest is ready.";
+        }
+        //API
+        let fetchText = async function() {
+            let response = await fetch('https://marcconrad.com/uob/banana/api.php');
+            let data = await response.text();
+            startQuest(data);
+        }
+        //new question from API
+        let startup = function() {
+            fetchText();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Scoreboard and Timer -->
+        <div class="top-section">
+            <div class="scoreboard">
+                <h3>Score: <span id="score">0</span></h3>
+            </div>
+            <div class="timer">
+                <h3>Time Left: <span id="time">01:00</span></h3>
+            </div>
+        </div>
+
+        <!-- Game Box -->
+        <div class="game-box">
+            <h2>Level <span id="level">1</span></h2>
+            <h1>Solve Mee..</h1>
+            <img id="quest" alt="Quest Image">
+        </div>
+
+        <!-- Answer Buttons -->
+        <div class="answer-buttons">
+            <button class="answer-btn" data-value="0">0</button>
+            <button class="answer-btn" data-value="1">1</button>
+            <button class="answer-btn" data-value="2">2</button>
+            <button class="answer-btn" data-value="3">3</button>
+            <button class="answer-btn" data-value="4">4</button>
+            <button class="answer-btn" data-value="5">5</button>
+            <button class="answer-btn" data-value="6">6</button>
+            <button class="answer-btn" data-value="7">7</button>
+            <button class="answer-btn" data-value="8">8</button>
+            <button class="answer-btn" data-value="9">9</button>
+            <button class="answer-btn" data-value="10">10</button>
+        </div>
+
+        <!-- Back to Menu -->
+        <div class="back-to-menu">
+            <button id="menu-button">Main Menu</button>
+        </div>
+    </div>
+
+    <!-- New Script for Timer and Game Logic -->
+    <script>
+        let level = 1;
+        let score = 0;
+        let timer;
+        let timeLeft = 60;
+
+        // Initialize the timer
+        function startTimer() {
+            clearInterval(timer);
+            timeLeft = 60;
+            updateTimerDisplay();
+            timer = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+                if (timeLeft <= 0) {
+                    resetGame();
+                }
+            }, 1000);
+        }
+
+        // Update the timer display
+        function updateTimerDisplay() {
+            const timerDisplay = document.getElementById('time');
+            timerDisplay.textContent = timeLeft > 9 ? `00:${timeLeft}` : `00:0${timeLeft}`;
+        }
+
+        // Reset the game to level 1
+        function resetGame() {
+    saveGameData(); // Save the game data
+    clearInterval(timer);
+    alert("Time's up! Returning to Level 1.");
+    level = 1;
+    score = 0;
+    updateLevel();
+    updateScore();
+    startTimer();
+    startup(); // Reset the question
+}
+
+        // Update the level display
+        function updateLevel() {
+            const levelDisplay = document.getElementById('level');
+            levelDisplay.textContent = level;
+        }
+
+        // Update the score display
+        function updateScore() {
+            const scoreDisplay = document.getElementById('score');
+            scoreDisplay.textContent = score;
+        }
+
+        // Handle answer submission(btn)
+        document.querySelectorAll('.answer-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const userAnswer = parseInt(button.getAttribute('data-value'), 10);
+                if (userAnswer === solution) {
+                    alert('Correct!');
+                    score += 20;
+                    level++;
+                    if (level > 5) {
+                        alert('Congratulations! You completed all levels!');
+                        resetGame();
+                        return;
+                    }
+                    updateLevel();
+                    updateScore();
+                    startTimer();
+                    startup(); // Load the next question
+                } else {
+                    alert('Incorrect!');
+                    score -= 10;
+                    updateScore();
+                }
+            });
+        });
+        // Send score and time to the server
+        function saveGameData() {
+    fetch('save_game_data.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            score: score,
+            total_time: 60 - timeLeft, // Calculate total time played in seconds
+        }),
+    })
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+}
+
+        // Start the game
+        startup();
+        startTimer();
+
+        window.addEventListener('beforeunload', saveGameData);
+
+        document.getElementById('menu-button').addEventListener('click', () => {
+            window.location.href = 'Mainmenu.php'; // Adjust the path if necessary
+        })
+        
+    </script>
+</body>
+</html>

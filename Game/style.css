@@ -1,0 +1,776 @@
+/* Reset and base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/image\ 01.jpg'); /* Full background image */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Outer container for sections */
+.outer-container {
+    display: flex;
+    width: 1000px;
+    height: 600px;
+    border: 5px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Left section (image fills the entire section) */
+.left-section {
+    width: 50%; /* Half the container width */
+    height: 100%;
+    background-image: url("images/im\ new\ 4.jpg"); /* Add your image */
+    background-size: cover; /* Ensures the image covers the section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+}
+
+/* Right section */
+.right-section {
+    width: 50%; /* Half the container width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(224, 224, 224, 0.8); /* Slightly transparent background */
+    padding: 20px;
+}
+
+/* Transparent content box */
+.transparent-box {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    color: white; /* White text for contrast */
+    border-radius: 10px;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+/* Content styling */
+.transparent-box h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px #000;
+}
+
+.transparent-box p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.transparent-box button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #550000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.transparent-box button:hover {
+    background-color: #bdb32a;
+}
+
+
+/* Outer box styling */
+.outer-box {
+    display: flex;
+    width: 1000px;
+    height: 500px;
+    border: 5px solid #ccc;
+    border-radius: 20px;
+    background-image: url('images/image\ 03.jpg');
+    background-color: rgba(224, 224, 224, 0.8); /* Slightly transparent background */
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Left-hand side: Image container */
+
+
+/* Keeping the home page styles untouched */
+
+/* Box styling */
+.box1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 1000px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* Login container with flexbox */
+.login-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Image container on the left */
+.login-image {
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Shadowed overlay for login details on the right */
+.login-overlay {
+    width: 50%;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 5px 5px 20px rgba(128, 128, 128, 0.6); /* Ash color shadow */
+}
+
+.login-overlay h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.login-overlay label, 
+.login-overlay input, 
+.login-overlay p, 
+.login-overlay button {
+    width: 80%;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.login-overlay input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+.login-overlay button {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #550000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-overlay button:hover {
+    background-color: #B2BEB5;
+}
+
+.login-overlay p a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.login-overlay p a:hover {
+    text-decoration: underline;
+}
+
+/* Centered box for main menu */
+.main-menu-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* Image container for menu */
+.menu-image {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('images/mini\ 07.jpg'); /* Main menu image */
+    background-size: cover;
+    background-position: center;
+    border-radius: 1px;
+}
+
+.menu-image h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.menu-image button {
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    background-color: #550000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-image button:hover {
+    background-color: #B2BEB5;
+}
+
+/*profile*/
+/* Back button styling */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #333;
+}
+
+/* Profile box styling */
+.box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 320px;
+    height: 500px;
+    background-image: url(images/min10.jpg);
+    border-radius: 20px;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* Profile container for user image and details */
+.profile-container {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+}
+
+/* Title styling */
+.profile-container h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Circular profile image */
+.profile-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    object-fit: cover;
+}
+
+/* Transparent box styling for profile details */
+.profile-details {
+    margin-top: 20px;
+}
+
+.detail-box {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.detail-box p {
+    font-size: 1.2em;
+    color: #333;
+    margin: 0;
+}
+
+/* How-to-play specific styling */
+
+/* Rules page styling */
+
+.rules-container {
+    text-align: left;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    bottom: 30px;
+    background-image: url('images/new\ bg.jpg');
+    
+}
+
+/* Title styling */
+.rules-container h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left; /* Align title to the left */
+}
+
+/* Individual rule boxes with transparent background */
+.rule-box {
+    background-color:rgba(166, 150, 150, 0.5); /* Semi-transparent */
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left; /* Align text within each rule box to the left */
+    font-weight:bolder;
+}
+
+.rule-box p {
+    font-size: 1.2em;
+    color: #333;
+    margin: 0;
+    text-align: left; /* Ensure each paragraph is aligned to the left */
+}
+
+
+/* Settings container */
+.settings-box {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    margin: 100px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Background image styling */
+.settings-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Settings content */
+.settings-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
+}
+
+/* Settings title */
+.settings-content h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Setting item */
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Setting item text */
+.setting-item span {
+    font-size: 1.2em;
+}
+
+/* Toggle switch styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+/* Hide default checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider styling */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+/* Slider circle */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+/* When the checkbox is checked */
+input:checked + .slider {
+    background-color: #007bff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* Back button styling */
+.back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #550000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-button:hover {
+    background-color: #bdb32a;
+}
+
+/*play*/
+
+the Play Page */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    text-align: center;
+}
+
+/* Top section (Scoreboard and Timer) */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.scoreboard, .timer {
+    background: #FDDA0D;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: absolute; /* Allows precise positioning */
+    width: 120px; /* Fixed size for a consistent look */
+    height: 80px; /* Matches the smaller box proportions */
+    text-align: center;
+}
+
+.scoreboard {
+    top: 20px;
+    left: 20px; /* Top-left corner */
+}
+
+.timer {
+    top: 20px;
+    right: 20px; /* Top-right corner */
+}
+.game-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-image: url(images/banana.jpg);
+    height: 500px;
+    width: 800px;
+    margin-bottom: 20px;
+}
+
+
+.answer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.answer-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.answer-btn:hover {
+    background-color: #0056b3;
+}
+
+.back-to-menu {
+    text-align: center;
+}
+
+#menu-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#menu-button:hover {
+    background-color: #218838;
+} 
+/* Leaderboard page */
+
+/* Back button styling */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #333;
+}
+
+/* Leaderboard container styling */
+.leaderboard-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align contents to the top */
+    width: 500px;
+    height: 600px;
+    padding: 20px;
+    background-image: url(images/new\ bg.jpg);
+    border-radius: 20px;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.85);
+    margin: 0 auto;
+}
+
+/* Title styling */
+.leaderboard-title {
+    font-size: 2.5em; /* Larger title */
+    color: #333;
+    margin-bottom: 200px; /* Increased space below the title */
+    text-align: center;
+}
+
+/* Table container */
+.leaderboard-table-container {
+    width: 110%;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    margin-top: -100px; /* Adding more space to the top */
+}
+
+/* Leaderboard table styling */
+.leaderboard-table {
+    width: 90%; /* Table width adjusted */
+    border-collapse: collapse;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.9); /* White background for the table */
+}
+
+/* Table header and cell styling */
+.leaderboard-table th, .leaderboard-table td {
+    padding: 20px; /* Adjusted padding for better cell spacing */
+    text-align: center;
+    font-size: 1.6em; /* Decreased font size for better readability */
+    border: 1px solid #ddd;
+}
+
+.leaderboard-table th {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+    color: #333;
+}
+
+.leaderboard-table td {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.leaderboard-table tr:nth-child(even) {
+    background-color: rgba(240, 240, 240, 0.9);
+}
+
+.leaderboard-table tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.leaderboard-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Back button styling */
+.back-button {
+    margin-top: 40px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-button:hover {
+    background-color: #555;
+}
+
+/* Style for the login-overlay container */
+.login-overlay {
+    width: 50%;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 5px 5px 20px rgba(128, 128, 128, 0.6); /* Ash color shadow */
+}
+
+/* Heading style */
+.login-overlay h2 {
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Form style */
+#register-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Label style */
+#register-form label {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Input field style */
+#register-form input[type="text"],
+#register-form input[type="email"],
+#register-form input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc; /* Inner border */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Button style */
+#register-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #ccc; /* Button border */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Link style */
+.login-overlay p {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.login-overlay p a {
+    text-decoration: none;
+    font-weight: bold;
+}

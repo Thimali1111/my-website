@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box1">
+        <div class="login-container">
+            <div class="login-image">
+                <img src="images/im01.jpg" alt="Registration Background">
+            </div>
+            <div class="login-overlay">
+                <h2>Register</h2>
+
+                <!-- Wrap inputs inside a form -->
+                <form action="register.php" id="register-form" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password"
+                        placeholder="Confirm your password" required>
+
+                    <button type="submit">Register</button>
+                </form>
+
+
+                <p>Already have an account? <a href="login.html">Login here</a>.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('register-form').addEventListener('submit', function (e) {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            if (password !== confirmPassword) {
+                e.preventDefault();
+                alert('Passwords do not match!');
+            }
+        });
+    </script>
+</body>
+
+</html>

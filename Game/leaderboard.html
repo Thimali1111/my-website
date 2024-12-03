@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Leaderboard container -->
+    <div class="leaderboard-box">
+
+        <!-- Leaderboard header -->
+        <h2 class="leaderboard-title">Leaderboard</h2>
+
+        <!-- Table for leaderboard -->
+        <div class="leaderboard-table-container">
+            <table class="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                    <!-- Dynamically populated rows will go here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Back button -->
+        <button onclick="window.location.href = 'Mainmenu.php';" class="back-button">← Back</button>
+    </div>
+
+    <script src="leaderboard.js"></script>
+</body>
+</html>
